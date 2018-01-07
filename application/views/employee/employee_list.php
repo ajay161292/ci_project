@@ -10,8 +10,11 @@
       <button class="btn btn-success addemp">Add New Employee</button>
     </p>
     <p style="text-align:right;">
-      <a href="<?php echo base_url('employee/generatepdf'); ?>">
-        <button class="btn btn-success">Create PDF</button>
+      <a href="<?php echo base_url('employee/generateTCpdf'); ?>">
+        <button class="btn btn-success">Create TCPDF</button>
+      </a>
+      <a href="<?php echo base_url('employee/generateDOMpdf'); ?>">
+        <button class="btn btn-success">Create DOMPDF</button>
       </a>
     </p>
   </div>

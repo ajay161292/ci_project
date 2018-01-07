@@ -55,7 +55,7 @@ class Employee extends CI_Controller
 		echo json_encode($message);
 	}
 
-	public function generatepdf(){
+	public function generateTCpdf(){
 		$data = [];
 		$data['name'] = "Ajay Parmar";
 		// echo __FILE__.'/tcpdf/tcpdf.php';exit;
@@ -75,6 +75,20 @@ class Employee extends CI_Controller
 		$pdf->Write(5, $html);
 		$pdf->Output('My-File-Name.pdf', 'I');
 		// $this->load->view('employee/getpdf',$data);
+	}
+
+	public function generateDOMpdf(){
+		$this->load->library('pdfgenerator');
+		// $data['users']=array(
+		// 	array('firstname'=>'I am','lastname'=>'Programmer','email'=>'iam@programmer.com'),
+		// 	array('firstname'=>'I am','lastname'=>'Designer','email'=>'iam@designer.com'),
+		// 	array('firstname'=>'I am','lastname'=>'User','email'=>'iam@user.com'),
+		// 	array('firstname'=>'I am','lastname'=>'Quality Assurance','email'=>'iam@qualityassurance.com')
+		// );
+		// $this->load->view('employee/getpdf',$data,true);
+		$html = "Hi There, My Name is Ajay Parmar. This is testing of DOMPDF!";
+		$filename = 'report_'.time();
+    	$this->pdfgenerator->generate($html, $filename, true, 'A4', 'portrait');
 	}
 }
 
