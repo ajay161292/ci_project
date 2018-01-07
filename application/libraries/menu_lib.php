@@ -11,7 +11,8 @@ class Menu_lib{
 					array('text'=>'About Us', 'url'=>'pages/aboutus'),
 					array('text'=>'Service',  'url'=>'pages/services'),
 					array('text'=>'Hooks & Profile Benchmarking', 'url'=>'profiler'),
-					array('text'=>'AJAX CRUD', 'url'=>'employee'),					
+					array('text'=>'AJAX CRUD', 'url'=>'employee'),
+					array('text'=>'Facebook NewsFeed', 'url'=>'news_feeds'),
 					array('text'=>'Contact',   'url'=>'pages/contact') 
 				);
 		$html = '<ul>';
