@@ -19,7 +19,7 @@ class TblEmployee extends CI_Model
 		// 		->get();
 		// $res = $query->result();
 		// printr($res,1);
-		$query = $this->db->get('employees');
+		$query = $this->db->get('employees',10);
 		if($query->num_rows() > 0){
 			return $query->result();
 		}

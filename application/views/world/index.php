@@ -1,5 +1,12 @@
 <?php
 // echo'<pre>';print_r($countries);exit
+// echo site_url().'<br/>';
+// echo base_url().'<br/>';
+// echo current_url().'<br/>';
+// echo uri_string().'<br/>';
+echo index_page();
+
+
 ?>
 
 <div id="tooplate_main">

@@ -5,7 +5,16 @@
     <a href="<?php echo base_url('product'); ?>">Products</a>
   </div>
   <h3>Employee List</h3>
-  <button class="btn btn-success addemp">Add New Employee</button>
+  <div>
+    <p style="text-align:left;">
+      <button class="btn btn-success addemp">Add New Employee</button>
+    </p>
+    <p style="text-align:right;">
+      <a href="<?php echo base_url('employee/generatepdf'); ?>">
+        <button class="btn btn-success">Create PDF</button>
+      </a>
+    </p>
+  </div>
   <table class="table table-striped table-responsive" id="emp_list" >
     <thead>
       <tr>
